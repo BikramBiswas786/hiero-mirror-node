@@ -3,8 +3,9 @@
 name: Cleanup
 
 on:
-  schedule:
-    - cron: "0 0 * * *" # Daily at midnight
+  workflow_dispatch:
+  # No schedule. The midnight job deletes untagged images in gcr.io/mirrornode using
+  # Google workload identity this fork does not have, on hiero-mirror-node-linux-medium.
 
 permissions:
   contents: read
