@@ -3,8 +3,9 @@
 name: GitHub Pages Sync
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 * * * *"
+  # No schedule. The hourly job checked out hashgraph/hedera-mirror-node with
+  # GH_ACCESS_TOKEN_HG and ran on hiero-mirror-node-linux-medium. This fork has neither,
+  # so the run sat queued and was cancelled about a day later.
 
 defaults:
   run:
