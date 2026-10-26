@@ -13,8 +13,10 @@ on:
   push:
     tags:
       - "v*"
-  schedule:
-    - cron: "0 5 * * *" # Daily at 5:00 AM UTC
+  # No schedule. This is a personal fork. The daily cron built five GraalVM images
+  # (grpc, importer, monitor, rest-java, web3) and failed every one, then mailed a failure.
+  # The acceptance job also asks for the private runner hiero-mirror-node-linux-large.
+  # Run it by hand from the Actions tab if a native image is actually needed.
   workflow_dispatch:
     inputs:
       branch:
