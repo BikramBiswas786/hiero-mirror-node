@@ -3,10 +3,10 @@
 name: Release Integration
 
 on:
-  push:
-    branches:
-      - "main"
+  workflow_dispatch:
 
+# This fork has no hiero-mirror-node runners, Google Cloud identity, or Hashgraph secrets.
+# Automatic runs only queue and then get cancelled. Run the workflow by hand if you add that infrastructure.
 permissions:
   contents: read
 

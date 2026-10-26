@@ -2,13 +2,10 @@
 
 name: Snyk Monitor
 on:
-  push:
-    branches:
-      - "main"
-      - "release/**"
-    tags:
-      - "v*"
+  workflow_dispatch:
 
+# This fork has no hiero-mirror-node runners, Google Cloud identity, or Hashgraph secrets.
+# Automatic runs only queue and then get cancelled. Run the workflow by hand if you add that infrastructure.
 defaults:
   run:
     shell: bash

@@ -2,8 +2,6 @@
 
 name: "Non-Zero Realm"
 on:
-  schedule:
-    - cron: "0 0 * * *" # Daily at midnight
   workflow_dispatch:
     inputs:
       branch:
